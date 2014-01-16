@@ -16,7 +16,7 @@ import javax.validation.constraints.Size;
 
 /**
  *
- * @author Yoshio Terada
+ * @author stnetadmin
  */
 @Entity
 @Table(name = "USERTABLE")

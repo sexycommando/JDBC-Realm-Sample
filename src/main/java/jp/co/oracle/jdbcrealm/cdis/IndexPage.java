@@ -14,7 +14,7 @@ import javax.servlet.http.HttpServletRequest;
 
 /**
  *
- * @author Yoshio Terada
+ * @author stnetadmin
  */
 @Named(value = "indexPage")
 @RequestScoped
@@ -58,6 +58,10 @@ public class IndexPage {
         ExternalContext externalContext = context.getExternalContext();
         HttpServletRequest request = (HttpServletRequest) externalContext.getRequest();
 
+		String name = getUsername();
+		String pass = getPassword();
+		Logger.getLogger(IndexPage.class.getName()).log(Level.INFO, name + ":" + pass);
+
         try {
             request.login(getUsername(), getPassword());
             return "home.xhtml?faces-redirect=true";
@@ -67,6 +71,7 @@ public class IndexPage {
             return "";
         }
     }
+
     /*
      ログアウトボタンが押下された際の処理
      */

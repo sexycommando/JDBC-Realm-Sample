@@ -8,7 +8,7 @@ import jp.co.oracle.jdbcrealm.ejbs.UserRegistManager;
 
 /**
  *
- * @author tyoshio2002
+ * @author stnetadmin
  */
 @Named(value = "registPage")
 @RequestScoped

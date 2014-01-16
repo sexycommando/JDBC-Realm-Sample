@@ -5,7 +5,7 @@ import javax.ejb.Stateless;
 
 /**
  *
- * @author Yoshio Terada
+ * @author stnetadmin
  */
 @Stateless
 public class RoleCheckLogic {

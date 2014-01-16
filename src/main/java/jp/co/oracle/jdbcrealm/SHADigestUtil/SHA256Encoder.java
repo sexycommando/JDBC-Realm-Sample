@@ -10,7 +10,7 @@ import java.util.logging.Logger;
  * メッセージ・ダイジェストとして保存
  * プレイン・テキストとメッセージ・ダイジェストの変換ユーティリティ
  *
- * @author Yoshio Terada
+ * @author stnetadmin
  */
 public class SHA256Encoder {
     // SHA-256 ハッシュとして保存

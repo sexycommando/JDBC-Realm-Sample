@@ -9,7 +9,7 @@ import jp.co.oracle.jdbcrealm.ejbs.RoleCheckLogic;
 
 /**
  *
- * @author Yoshio Terada
+ * @author stnetadmin
  */
 @Named(value = "homePage")
 @RequestScoped

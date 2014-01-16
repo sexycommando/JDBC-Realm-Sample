@@ -10,7 +10,7 @@ import jp.co.oracle.jdbcrealm.entities.Usertable;
 
 /**
  *
- * @author Yoshio Terada
+ * @author stnetadmin
  */
 @Stateless
 public class UserRegistManager {
@@ -18,12 +18,13 @@ public class UserRegistManager {
     @PersistenceContext
     EntityManager em;
     
-    /*
-    指定したユーザ、メールアドレス、パスワード、グループ名で
-    DB へ登録
-    */
-    
-
+    /**
+     * 指定したユーザ、メールアドレス、パスワード、グループ名で DB へ登録します。
+	 * @param username 
+	 * @param mailaddress 
+	 * @param password 
+	 * @param groupname 
+     */
     public void createUserAndGroup(String username,String mailaddress, String password, String groupname) {
         Usertable user = new Usertable();
         user.setUsername(username);
@@ -40,19 +41,21 @@ public class UserRegistManager {
         em.persist(user);
         em.persist(group);
     }
-    /*
-    DB から指定したユーザの削除
-    */
 
+    /**
+     * DB から指定したユーザ（プリンシパル）を削除します。
+	 * @param username プリンシパル文字列
+     */
     public void removeUser(String username) {
         Usertable user = em.find(Usertable.class, username);
         em.remove(user);
     }
 
-    /*
-    DB から指定したユーザの検索
-    */
-    
+    /**
+     * DB から指定したユーザ（プリンシパル）を検索します。
+	 * @param username プリンシパル文字列
+	 * @return Usertable エンティティ
+     */
     public Usertable findUser(String username){
         Usertable user = em.find(Usertable.class, username);
         return user;

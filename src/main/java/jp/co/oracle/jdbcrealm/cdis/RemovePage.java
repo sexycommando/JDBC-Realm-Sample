@@ -13,7 +13,7 @@ import jp.co.oracle.jdbcrealm.ejbs.UserRegistManager;
 
 /**
  *
- * @author Yoshio Terada
+ * @author stnetadmin
  */
 @Named(value = "removePage")
 @RequestScoped

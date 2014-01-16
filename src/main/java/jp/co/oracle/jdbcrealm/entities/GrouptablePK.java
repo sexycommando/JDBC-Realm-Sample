@@ -9,7 +9,7 @@ import javax.validation.constraints.Size;
 
 /**
  *
- * @author Yoshio Terada
+ * @author stnetadmin
  */
 @Embeddable
 public class GrouptablePK implements Serializable {

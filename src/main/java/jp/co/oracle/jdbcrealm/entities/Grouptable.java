@@ -11,7 +11,7 @@ import javax.persistence.Table;
 
 /**
  *
- * @author Yoshio Terada
+ * @author stnetadmin
  */
 @Entity
 @Table(name = "GROUPTABLE")

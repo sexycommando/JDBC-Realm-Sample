@@ -6,7 +6,7 @@
       xmlns:f="http://xmlns.jcp.org/jsf/core">
     <h:head>
         <title>JSF-WebSocket WebMail ログイン画面</title>
-        <f:event type="preRenderView" listener="#{indexPage.onPageLoad}"/>
+        <f:event type="preRenderView" listener="#{indexPage.onPageLoad()}"/>
     </h:head>
     <script>
         window.onunload = function() {
@@ -25,7 +25,7 @@
                         <h:inputSecret onselect="true" id="password" value="#{indexPage.password}" style="font-size:14px;"/>  
 
                     </h:panelGrid>
-                    <h:commandButton value="ログイン" style="font-size:14px;" action="#{indexPage.login}"/>
+                    <h:commandButton value="ログイン" style="font-size:14px;" action="#{indexPage.login()}"/>
                     <h:messages id="messages" showDetail="true" errorStyle="color:RED;font-size:14px;" />                 
                     <h:commandLink value="ユーザ登録" action="/faces/user-manage/regist.xhtml" /> /
                     <h:commandLink value="ユーザ削除" action="/faces/user-manage/remove.xhtml" />
